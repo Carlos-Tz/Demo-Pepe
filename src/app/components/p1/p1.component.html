@@ -1,0 +1,39 @@
+<div class="row">
+  <!-- <div class="row align-items-center"> -->
+      <!-- <div class="row"> -->
+    <!-- <div class="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 mt-4 mx-auto"> -->
+    <div class="mx-auto mt-4" style="width:80%;">
+      <div class="card text-center">
+        <div class="card-body">
+          <h3 class="card-title">Encuesta de Salida</h3>
+          <img src="assets/logo.png" alt="" style="max-width:40%;">
+          <h4 class="card-text mt-4">¿Se acercó el capitan o gerente a su mesa?</h4>
+          <form [formGroup]="sForm" (ngSubmit)="sub()" novalidate>
+            <div class="btn-group btn-group-toggle mt-4" data-toggle="buttons" style="width:55%;">
+              <label class="btn btn-lg btn-success " style="width:50%; margin-right:2mm; border-radius: 10px;">
+                <input type="radio" formControlName="group1" value="SI" autocomplete="off">SI
+              </label>
+              <label class="btn btn-lg btn-danger" style="width:50%; margin-left:2mm; border-radius: 10px;">
+                <input type="radio" formControlName="group1" value="NO" autocomplete="off"> NO
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer text-muted mt-4">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination pagination-sm justify-content-center">
+              <li class="page-item active"><a class="page-link" style="border-radius:50%;"></a></li>
+              <li class="page-item"><a class="page-link" style="border-radius:50%;"></a></li>
+              <li class="page-item"><a class="page-link" style="border-radius:50%;"></a></li>
+              <li class="page-item"><a class="page-link" style="border-radius:50%;"></a></li>
+              <li class="page-item"><a class="page-link" style="border-radius:50%;"></a></li>
+              <li class="page-item"><a class="page-link" style="border-radius:50%;"></a></li>
+              <li class="page-item"><a class="page-link" style="border-radius:50%;"></a></li>
+              <li class="page-item"><a class="page-link" style="border-radius:50%;"></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+</div>

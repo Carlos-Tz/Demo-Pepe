@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+.active a{
+    background-color: #aaa !important;    
+    border:1px solid #aaa !important;
+}
+.page-link{
+    margin-right: 1mm !important;
+}
+
+.card-title{
+    color: #666;
+}
+.card-text{
+    color: #666;
+}

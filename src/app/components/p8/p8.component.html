@@ -1,0 +1,37 @@
+<div class="row">
+  <!-- <div class="row align-items-center">
+    <div class="col-12 col-sm-10 col-md-8 col-lg-8  mt-4 offset-md-2 offset-sm-1 offset-lg-3 "> -->
+  <div class="mx-auto mt-4" style="width:80%;">
+    <div class="card text-center">
+      <form [formGroup]="sForm" (ngSubmit)="submitS()" novalidate>
+        <div class="card-body">
+          <h3 class="card-title">Encuesta de Salida</h3>
+          <img src="assets/logo.png" alt="" style="max-width:40%;">
+          <h4 class="card-text mt-4">Comentarios y sugerencias</h4>
+          <textarea formControlName="comentarios" class="form-control mx-auto" rows="5"
+            style="max-width: 65%; resize: none;"></textarea>
+          <div class="btn-group btn-group-toggle mt-4" data-toggle="buttons" style="width:40%;">
+            <label class="btn btn-lg btn-success " style="width:100%; margin-right:2mm; border-radius: 10px;">Enviar
+              <button type="submit" [disabled]="!sForm.valid" autocomplete="off" style="display:none;"></button>
+            </label>
+          </div>
+        </div>
+      </form>
+      <div class="card-footer text-muted mt-4">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination pagination-sm justify-content-center">
+            <li class="page-item"><a class="page-link " style="border-radius:50%;"></a></li>
+            <li class="page-item"><a class="page-link" style="border-radius:50%;"></a></li>
+            <li class="page-item"><a class="page-link" style="border-radius:50%;"></a></li>
+            <li class="page-item"><a class="page-link" style="border-radius:50%;"></a></li>
+            <li class="page-item"><a class="page-link" style="border-radius:50%;"></a></li>
+            <li class="page-item"><a class="page-link" style="border-radius:50%;"></a></li>
+            <li class="page-item"><a class="page-link" style="border-radius:50%;"></a></li>
+            <li class="page-item active"><a class="page-link" style="border-radius:50%;"></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+</div>
