@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup, Validators } from '@angular/forms';
 import { SurveyService } from 'src/app/services/survey.service';
 import { Router } from '@angular/router';
+import { MailService } from '../../services/mail.service';
 
 @Component({
   selector: 'app-p7',
@@ -13,6 +14,7 @@ export class P7Component implements OnInit {
   submitted = false;
   constructor(
     public api: SurveyService,
+    public apimail: MailService,
     public fb: FormBuilder,
     private router: Router
   ) { }
@@ -35,7 +37,8 @@ export class P7Component implements OnInit {
     if (this.sForm.invalid) {
       return;
      }
-
+    
+   // this.apimail.mail_(this.sForm.value);
     this.api.info(this.sForm.value);
     this.router.navigate(['/8']);
   }

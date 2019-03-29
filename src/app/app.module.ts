@@ -4,6 +4,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +19,9 @@ import { P7Component } from './components/p7/p7.component';
 import { P8Component } from './components/p8/p8.component';
 import { P9Component } from './components/p9/p9.component';
 import { environment } from '../environments/environment';
+
+import { SurveyService } from './services/survey.service';
+import { MailService } from './services/mail.service';
 
 @NgModule({
   declarations: [
@@ -37,9 +42,11 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     NgbRatingModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [SurveyService, MailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

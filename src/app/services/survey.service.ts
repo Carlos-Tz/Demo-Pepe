@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Survey } from '../services/survey';
 import { AngularFireDatabase, AngularFireList, AngularFireObject } from '@angular/fire/database';
+import { MailService } from '../services/mail.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +29,10 @@ export class SurveyService {
   }
   surveysList: AngularFireList<any>;
   surveyObject: AngularFireObject<any>;
-  constructor(private db: AngularFireDatabase) { }
+
+  
+
+  constructor(private db: AngularFireDatabase, public amail: MailService) { }
 
   GetSurveysList() {
     this.surveysList = this.db.list('polls'/*, ref =>
@@ -37,9 +42,14 @@ export class SurveyService {
   }
   
   AddSurvey(survey: Survey){
-   // console.log(survey);
+    
     this.surveysList.push(survey);
+    this.amail.mail_(survey).subscribe(data => {
+      if(data){ }
+    });
+  
   }
+ 
 
   group1(sf){    
     this.survey.group1 = sf;
@@ -68,6 +78,7 @@ export class SurveyService {
     this.survey.telefono = sf.telefono;
     this.survey.fecha = sf.fecha;
     this.survey.date = Date.now();
+     
   }
   comm(sf){
     this.survey.comentarios = sf.comentarios;
