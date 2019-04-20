@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+html,body{
+    height: 100% !important;
+}
+
 .active a{
     background-color: #aaa !important;    
     border:1px solid #aaa !important;
@@ -9,7 +13,11 @@
 
 .card-title{
     color: #666;
+    margin-bottom: 0 !important;
 }
 .card-text{
     color: #666;
+}
+.card-footer{
+    background: none !important;
 }

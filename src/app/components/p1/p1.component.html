@@ -1,13 +1,13 @@
-<div class="row">
+<div class="row" style="height: 100%;">
   <!-- <div class="row align-items-center"> -->
       <!-- <div class="row"> -->
     <!-- <div class="col-12 col-sm-10 col-md-10 col-lg-8 col-xl-8 mt-4 mx-auto"> -->
-    <div class="mx-auto mt-4" style="width:80%;">
-      <div class="card text-center">
+    <div class="mx-auto" style="width:100%; height: 100%; display:table;">
+      <div class="card text-center" style="vertical-align: middle !important; display: table-cell;">
         <div class="card-body">
-          <h3 class="card-title">Encuesta de Salida</h3>
-          <img src="assets/logo.png" alt="" style="max-width:40%;">
-          <h4 class="card-text mt-4">¿Se acercó el capitan o gerente a su mesa?</h4>
+          <h1 class="card-title">Encuesta de Salida</h1>
+          <img src="assets/logo.png" alt="" style="max-width:50%;">
+          <h2 class="card-text mt-4">¿Se acercó el capitan o gerente a su mesa?</h2>
           <form [formGroup]="sForm" (ngSubmit)="sub()" novalidate>
             <div class="btn-group btn-group-toggle mt-4" data-toggle="buttons" style="width:55%;">
               <label class="btn btn-lg btn-success " style="width:50%; margin-right:2mm; border-radius: 10px;">
