@@ -76,12 +76,11 @@ export class SurveyService {
     this.survey.name = sf.name;
     this.survey.email = sf.email;
     this.survey.telefono = sf.telefono;
-    this.survey.fecha = sf.fecha;
-    this.survey.date = Date.now();
-     
+    this.survey.fecha = sf.fecha;     
   }
   comm(sf){
     this.survey.comentarios = sf.comentarios;
+    this.survey.date = Date.now();
     this.AddSurvey(this.survey);
   }
 }

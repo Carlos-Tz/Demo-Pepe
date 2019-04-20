@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MailService {
   url='http://localhost/pepe/';
+ // url='https://didocu.com/pepegaucho/';
 
   constructor(private http: HttpClient) { }
   mail_(mail: Object){
